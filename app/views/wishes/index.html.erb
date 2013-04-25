@@ -31,8 +31,34 @@
 	<%
 	if @friends.count > 0
 	%>
-	<h2>YOUR FRIENDS HAVE USED THIS! LIST WILL BE COMING SOON.</h2>
+	<h2>THEY WANT TO SEE AT GLASTONBURY...</h2>
+	
 	<%
+		@friends.each do |friend|
+
+			%>
+			<div class="friend_wishes">
+			<img class="friend_display_picture" src="<%= @friends.pictureurl %>" alt="" />
+			
+				<ul class="wishes friend">
+					
+					<%
+					friend.wishs.each do |friendwish|
+
+						%>
+						<li class="wish"><%= friendwish.position %>. <%= friendwish.name %></li>
+						<%
+
+					end
+					%>
+					
+				</ul>
+			
+			</div>
+			<%
+
+		end
+	
 	else
 	%>
 	<h2>NONE OF YOUR FRIENDS HAVE USED THIS, SPREAD THE WORD!</h2>

@@ -9,9 +9,14 @@ class WishesController < ApplicationController
 
 			#Get users friendlist, use find_by to get them all if they exist
 			@graph = Koala::Facebook::API.new(session[:token])
-
+			#
 			friendslist = @graph.get_connections("me", "friends")
-			@friends = User.includes(:wishs).where("uid IN (?)", friendslist)
+
+			friendsarray = friendslist.collect do |friend|
+				friend["id"]
+			end
+
+			@friends = User.includes(:wishs).where("uid IN (?)", friendsarray)
 
 		end 
 
