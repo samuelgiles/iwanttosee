@@ -29,6 +29,18 @@ body{
 	font-style: normal;
 }
 
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
 	font-family: 'icomoon';
@@ -127,6 +139,25 @@ h3{
 		opacity: 0.8;
 	}
 }
+
+.friend_wishes{
+	width:100%;
+	clear:both;
+	img{
+		width:8%;
+		float:left;
+	}
+	.wish{
+		width: 100%;
+		font-size: 18px;
+	}
+	.wishes{
+		float: left;
+		width: 92%;
+	}
+}
+
+
 @media only screen and (max-width: 900px) {
 	.container{
 		width:95%;

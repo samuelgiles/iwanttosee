@@ -37,13 +37,13 @@
 		@friends.each do |friend|
 
 			%>
-			<div class="friend_wishes">
+			<div class="friend_wishes clearfix">
 			<img class="friend_display_picture" src="<%= friend.pictureurl %>" alt="" />
 			
 				<ul class="wishes friend">
 					
 					<%
-					friend.wishs.each do |friendwish|
+					friend.wishs.reverse_each do |friendwish|
 
 						%>
 						<li class="wish"><%= friendwish.position %>. <%= friendwish.name %></li>
