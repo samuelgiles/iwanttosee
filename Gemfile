@@ -5,7 +5,6 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
 gem "pg", :group => :production
 gem "sqlite3", :group => :development
 
@@ -25,6 +24,7 @@ gem 'therubyracer', :platforms => :ruby
 gem 'less-rails'
 
 gem 'omniauth-facebook'
+gem 'koala'
 
 
 # To use ActiveModel has_secure_password
