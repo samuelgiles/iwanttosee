@@ -34,4 +34,8 @@ Iwanttosee::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  ENV['FACEBOOKAPPID'] = '441046059322302'
+  ENV['FACEBOOKAPPSECRET'] = 'b2241d80b500cc6a72d5a159cd372b66'
+
 end

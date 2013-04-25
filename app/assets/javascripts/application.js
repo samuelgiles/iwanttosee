@@ -25,4 +25,31 @@ $(document).ready(function(){
 	    }
 	});
 
+
+	$(".wishes.user").sortable({
+		axis: 'y',
+		dropOnEmpty: false,
+		handle: '.position',
+		cursor: 'crosshair',
+		items: '.wish',
+		opacity: 0.4,
+		scroll: true,
+		update: function(){
+		$.ajax({
+		type: 'post',
+		data: $(".wishes.user").sortable("serialize"),
+		dataType: 'script',
+		complete: function(request){
+			if(request.status == 200){
+				$(".wishes.user").effect('highlight');
+			}
+			else{
+				alert("An error occured whilst sorting wishes.")
+			}
+			//resort();
+		},
+		url: '/sort'})
+		}
+	});
+
 });

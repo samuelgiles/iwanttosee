@@ -13,7 +13,7 @@
 		@list.each do |wish|
 
 			%>
-			<li class="wish"><%= wish.position %>. <%= wish.name %></li>
+			<li class="wish" id="wish_<%= wish.id %>"><span class="position"><%= wish.position %></span>. <%= wish.name %></li>
 			<%
 
 		end

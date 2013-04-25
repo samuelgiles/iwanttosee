@@ -22,6 +22,34 @@ class WishesController < ApplicationController
 
 	end
 
+	def edit
+
+	end
+
+	def remove
+
+	end
+
+	def sort
+
+		@responsejson = {
+      	:success => "false"
+    	}
+
+		if params[:wish]
+			(params[:wish].reverse!).each_with_index do |cWish,index|
+
+			    Wish.update(cWish, :position => index+1)
+
+		    end
+
+		    @responsejson[:success] = "true"
+		end
+
+		render :json => @responsejson
+
+	end
+
 	def create
 
 		@sortorder = current_user.wishs.maximum(:position)

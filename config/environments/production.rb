@@ -64,4 +64,8 @@ Iwanttosee::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  ENV['FACEBOOKAPPID'] = '152474741590983'
+  ENV['FACEBOOKAPPSECRET'] = 'a5e319cb42100acfa94532bd9b0f701d'
+
 end
