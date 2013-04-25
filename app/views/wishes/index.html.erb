@@ -43,7 +43,7 @@
 				<ul class="wishes friend">
 					
 					<%
-					friend.wishs.reverse_each do |friendwish|
+					friend.wishs.each do |friendwish|
 
 						%>
 						<li class="wish"><%= friendwish.position %>. <%= friendwish.name %></li>
