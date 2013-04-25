@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui-1.10.1.custom.min
+//= require jquery.ui.touch-punch
 //= require_tree .
 
 function resort(){
