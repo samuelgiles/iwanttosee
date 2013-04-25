@@ -16,8 +16,13 @@
 
 $(document).ready(function(){
 	if($("body").attr("data-background") != ""){
-				
 		$.backstretch($("body").attr("data-background"));
-
 	}
+
+	$(".add_wish input").keypress(function(e) {
+	    if(e.which == 13) {
+	        $(".add_wish").submit();
+	    }
+	});
+
 });
