@@ -14,6 +14,14 @@
 //= require jquery_ujs
 //= require_tree .
 
+function resort(){
+	var iCount = 1;
+	$(".wish", ".wishes.user").each(function(){
+		$(".position", this).html(iCount);
+		iCount++;
+	});
+}
+
 $(document).ready(function(){
 	if($("body").attr("data-background") != ""){
 		$.backstretch($("body").attr("data-background"));
@@ -46,7 +54,7 @@ $(document).ready(function(){
 			else{
 				alert("An error occured whilst sorting wishes.")
 			}
-			//resort();
+			resort();
 		},
 		url: '/sort'})
 		}
