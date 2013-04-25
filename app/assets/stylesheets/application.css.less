@@ -1,0 +1,130 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ */
+
+@import "normalize.css.less";
+.box-sizing{
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+* { .box-sizing; }
+body{
+	font-family: "Proxima Nova", "Helvetica-Neue", "Helvetica Neue", Helvetica, Arial;
+	background-color: #000;
+	color: #fff;
+	padding-top: 20px;
+}
+@font-face {
+	font-family: 'icomoon';
+	src: url(data:application/x-font-woff;charset=utf-8;base64,d09GRk9UVE8AAAQ0AAsAAAAABewAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAABCAAAARUAAAEoUTluKUZGVE0AAAIgAAAAGgAAABxneeEUR0RFRgAAAjwAAAAdAAAAIAAwAARPUy8yAAACXAAAAEsAAABgL9/cQGNtYXAAAAKoAAAAOgAAAVLgFvLMaGVhZAAAAuQAAAAuAAAANvxbfwFoaGVhAAADFAAAAB4AAAAkBBD/5GhtdHgAAAM0AAAADAAAAAwEAACAbWF4cAAAA0AAAAAGAAAABgADUABuYW1lAAADSAAAAN4AAAGGUNfz7HBvc3QAAAQoAAAADAAAACAAAwAAeJw9jT1LA0EYhOfNbT4MR6LBaJS7xIAIgsWBglholzR2phGxE4QjmlhECFjYCIpruaSwshBTCGKpYG2jWPkzFBvBBYVxBbWaYWZ4RqAURCQTb7S32+0WJAHBkg0TtuzZktK+p31VzmKsUaDW/8ZP66Y1tpMMsJ8PgMEAB0MBMoFMFKB+GBnkMYJwtxXXomjWST2Kot+XvzNADuUInkjipJejVN7Wm0U62vmHIWqvK86nt4iBtYBYXTglr/tX2oXVY2JmupskRr0eIb064TcsUVWlsqvCHbdffCdv426KvJx/Il/2LsjnuTvyJjVVcZDxM/IxNblM0hpN9u83H7T+NMmcth31ZaxJ56wZ1kXtZ78BRzhs0QAAAHicY2BgYGQAgjO2i86D6LPz5JVgNABGCwXUAAB4nGNgZGBg4ANiCQYQYGJgBEIQyQLmMQAABGAANQAAAHicY2BmYmCcwMDKwMHow5jGwMDgDqW/MkgytDAwMDGwMjPAgQCCyRCQ5prC4PCA+QMD44P/Dxj0GB8wKDQwMDDCFSgAISMAEJ8MIgB4nGNgYGBmgGAZBkYGEPAB8hjBfBYGAyDNAYRMIIkHzB8Y/v9HZsn/E2CC6gIDRjYGZO6IBADe3gmwAAB4nGNgZGBgAGJZ1qw38fw2Xxm4mRhA4Ow8eSUE/f8BEwPjAyCXgwEsDQD+pAlLAAB4nGNgZGBgfPD/AYMeEwMDwz8GIAkUQQHMAG3nA/YAAAIAAAACAACAAAAAAAAAUAAAAwAAeJx1jjFuwkAQRZ/BEEWJIqoo5Upp0tiyN9BwAB8gBT1CK8sSsNICUk5CxRFS5hg5QI6QY/Ax06RgpdG++ftn/gKPHMm4nIw7JsYD8ZvxkFc+jXPpX8YjHvgxHkv/kzPL76U89VMXHohfjIc0VMa59JPxiGe+jcfSf+lYEdmoIlvoVnETo+CDQMuBNUuS2tAe1ktB0/v2/Z3kCDg8pdIcc9X/fVfNM6NgqvLy1bxrTdzum5ja4HxZubmzXJGfFdPCV7VMt/62UGpip/drRt3nswhp12lHXVY3Z88CnTnXAAB4nGNgZsALAAB9AAQ=) format('woff'),
+		 url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAANAIAAAwBQRkZUTWd54RQAAAVoAAAAHEdERUYAMgAGAAAFSAAAACBPUy8yL73cHwAAAVgAAABWY21hcOAY89MAAAHEAAABUmdhc3D//wADAAAFQAAAAAhnbHlmhllomQAAAyQAAABYaGVhZPxbfwEAAADcAAAANmhoZWEEEP/mAAABFAAAACRobXR4BKoAgAAAAbAAAAAUbG9jYQAeACwAAAMYAAAADG1heHAASAAXAAABOAAAACBuYW1lUNfz7AAAA3wAAAGGcG9zdJtVPjoAAAUEAAAAPAABAAAAAQAA0Z/dyF8PPPUACwIAAAAAAM2eHyIAAAAAzZ4fIgAA/+ACAAHgAAAACAACAAAAAAAAAAEAAAHg/+AALgIAAAD+AAIAAAEAAAAAAAAAAAAAAAAAAAAFAAEAAAAFABQAAQAAAAAAAgAAAAEAAQAAAEAAAAAAAAAAAQIAAZAABQAIAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAIABQMAAAAAAAAAAAAAEAAAAAAAAAAAAAAAUGZFZABA4APwAAHg/+AALgHgACCAAAABAAAAAAAAAgAAAAAAAAAAqgAAAgAAgAAAAAAAAAADAAAAAwAAABwAAQAAAAAATAADAAEAAAAcAAQAMAAAAAgACAACAAAAAOAD8AD//wAAAADgA/AA//8AACAAEAQAAQAAAAAAAAAAAAABBgAAAQAAAAAAAAABAgAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHgAsAAEAgP/gAXAB4AATAAAFIxEjNTM1NDY7ARUjIgYdATMHIwEgYEBALDxHLBcMTwlGIAEAWDQ7OVgQFCxYAAEAAP/gAgAB4AACAAARASECAP4AAeD+AAAAAAAAAAwAlgABAAAAAAABAAcAEAABAAAAAAACAAcAKAABAAAAAAADACMAeAABAAAAAAAEAAcArAABAAAAAAAFAAsAzAABAAAAAAAGAAcA6AADAAEECQABAA4AAAADAAEECQACAA4AGAADAAEECQADAEYAMAADAAEECQAEAA4AnAADAAEECQAFABYAtAADAAEECQAGAA4A2ABpAGMAbwBtAG8AbwBuAABpY29tb29uAABSAGUAZwB1AGwAYQByAABSZWd1bGFyAABGAG8AbgB0AEYAbwByAGcAZQAgADIALgAwACAAOgAgAGkAYwBvAG0AbwBvAG4AIAA6ACAAMgA1AC0ANAAtADIAMAAxADMAAEZvbnRGb3JnZSAyLjAgOiBpY29tb29uIDogMjUtNC0yMDEzAABpAGMAbwBtAG8AbwBuAABpY29tb29uAABWAGUAcgBzAGkAbwBuACAAMQAuADAAAFZlcnNpb24gMS4wAABpAGMAbwBtAG8AbwBuAABpY29tb29uAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAEAAgECAQMHdW5pRTAwMwd1bmlGMDAwAAAAAf//AAIAAQAAAA4AAAAYAAAAAAACAAEAAwAEAAEABAAAAAIAAAAAAAEAAAAAzD2izwAAAADNnh8iAAAAAM2eHyI=) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-facebook {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-facebook:before {
+	content: "\e003";
+}
+
+.container{
+	width: 900px;
+	margin-left:auto;
+	margin-right:auto;
+}
+h2,h3{
+	text-align: center;
+	text-shadow: 0px 3px 6px rgba(0,0,0,0.8);
+}
+h2{
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+h3{
+	font-size: 34px;
+	margin-top: 0px;
+}
+.button{
+	width: 290px;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight:bold;
+	font-size: 19px;
+
+}
+.sign_in{
+	background-color: rgba(33,44,183,0.8);
+	padding-top: 10px;
+	color: #fff;
+	padding-bottom: 10px;
+}
+.sign_out{
+	background-color: rgba(80,80,84,0.8);
+	padding-top: 10px;
+	color: #fff;
+	padding-bottom: 10px;
+}
+.wishes{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+}
+.wish{
+	background-color: rgba(25,25,25,0.8);
+	font-size: 25px;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+.add_wish{
+	input{
+		.wish;
+		width:100%;
+		border:none;
+		outline:none;
+		border-radius:none;
+		color: #fff;
+		opacity: 0.5;
+	}
+	input:focus{
+		opacity: 0.8;
+	}
+}
+

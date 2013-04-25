@@ -1,0 +1,50 @@
+<% if current_user %>
+  
+  
+  <h2>I WANT TO SEE AT GLASTONBURY...</h2>
+  	
+	<%
+	@add_another = ""
+	if @list.count > 0
+	%>
+		<ul class="wishes user">
+		<%
+		@add_another = " another"
+		@list.each do |wish|
+
+			%>
+			<li class="wish"><%= wish.position %>. <%= wish.name %></li>
+			<%
+
+		end
+		%>
+		</ul>
+	<%
+	end if
+	%>
+	
+	<%= form_tag("/add", :method => "post", :class => "add_wish") do %>
+	<%= text_field_tag(:title, nil, :placeholder => 'Add'+@add_another) %>
+	<% end %>
+	
+	
+	<%
+	if @friends.count > 0
+	%>
+	
+	<%
+	else
+	%>
+	<h2>NONE OF YOUR FRIENDS HAVE USED THIS, SPREAD THE WORD!</h2>
+	<%
+	end
+	%>
+	
+	<%= link_to "Sign Out", signout_path, :class => "sign_out button" %>
+<% else %>
+
+	<h2>FIND OUT WHAT THEY WANT TO SEE.</h2>
+	<h3>TELL THEM WHAT YOU WANT TO SEE.</h3>
+
+  <%= link_to raw("<i class='icon-facebook'></i> Sign in with Facebook"), "/auth/facebook", :class => "sign_in button" %>
+<% end %>
