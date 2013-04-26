@@ -59,7 +59,6 @@ class WishesController < ApplicationController
 	      @sortorder = @sortorder + 1
 	    end
 
-
 	    @list = current_user.wishs.new({"name" => params[:title], "position" => @sortorder})
 
 	    if(@list.save)
