@@ -37,7 +37,7 @@ class WishesController < ApplicationController
     	}
 
 		if params[:wish]
-			(params[:wish].reverse!).each_with_index do |cWish,index|
+			(params[:wish]).each_with_index do |cWish,index|
 
 			    Wish.update(cWish, :position => index+1)
 
