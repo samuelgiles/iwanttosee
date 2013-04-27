@@ -59,6 +59,7 @@ Iwanttosee::Application.routes.draw do
   root :to => 'wishes#index'
   match "/add" => "wishes#create"
   match "/sort" => "wishes#sort"
+  match "/stats" => "wishes#stats"
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
 end
