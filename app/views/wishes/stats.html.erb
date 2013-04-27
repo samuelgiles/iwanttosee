@@ -1,0 +1,15 @@
+<% if @mode = "all" %>
+<h2>EVERYONE WANTS TO SEE AT GLASTONBURY...</h2>
+<% else %>
+<h2>THEY WANT TO SEE AT GLASTONBURY...</h2>
+<% end %>
+
+<ul class="wishes">
+<%
+@wishstats.each_with_index do |wish, index|
+%>
+<li class="wish"><span class="wish_left"><%=index+1%>.<%=wish[0]%></span><span class="wish_count"><%=wish[1]%></span></li>
+<%
+end
+%>
+</ul>
