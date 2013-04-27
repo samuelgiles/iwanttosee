@@ -70,7 +70,7 @@ class WishesController < ApplicationController
 
 		# Loop through array, use the name as the key in the hash, +1 to that value
 		artistarray.each do |artist|
-			@artisthash[artist] += 1
+			@artisthash[((artist).gsub(/\b\w/){ $&.upcase })] += 1
 		end
 
 		@wishstats = (@artisthash.sort_by { |name, votes| votes }).reverse
